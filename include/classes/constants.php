@@ -16,7 +16,7 @@ define("DB_NAME", "LoginDB");
 define("TBL_USER", "User");
 
 /**
- * Not Lot logged in costant -  just for validating if a user is logged in or not.
+ * Not logged in costant -  just for validating if a user is logged in or not.
  */
 define("NOT_LOGGED_IN", "NULL");
 
