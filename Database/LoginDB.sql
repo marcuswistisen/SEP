@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.9.1
+-- version 4.2.10
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 16, 2014 at 10:27 AM
+-- Generation Time: Oct 23, 2014 at 06:00 AM
 -- Server version: 5.5.39-MariaDB
 -- PHP Version: 5.5.17
 
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `User` (
 --
 
 INSERT INTO `User` (`uts_id`, `uts_password`, `uts_cookie`, `first_name`, `last_name`, `prefered_first_name`, `phone_number`, `email`) VALUES
-(11916300, 'password1', 'q3RxGb34QasJj3Ku', 'Carl', 'Wistisen', 'Marcus', '0435774410', 'mmm@mmm');
+(11916300, 'password1', 'vGuZXwcgIdUVAnDA', 'Carl', 'Wistisen', 'Marcus', '0435774410', 'mmm@mmm');
 
 --
 -- Indexes for dumped tables
