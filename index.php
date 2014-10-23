@@ -11,7 +11,7 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
     </head>
-    <body>	
+    <body>
 		<?php global $session; if ($session->logged_in) require("dashboard.php"); else require("login.php");?>
     </body>
 </html>

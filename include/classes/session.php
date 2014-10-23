@@ -8,8 +8,7 @@ class Session
    var $logged_in;    // True if user is logged in
    var $userinfo = array();  // The array holding an users info
    var $url;          // The page url that is currently being viewd
-   var $referrer;     // Last recorded page that was viewd
-
+   var $referrer;     // Last recorded page that was view
    /* Class constructor */
    function Session(){
       $this->startSession(); // start a new session

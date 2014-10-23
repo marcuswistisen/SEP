@@ -6,9 +6,10 @@
  * correct if you going to try it out!
  */
 define("DB_SERVER", "localhost");
-define("DB_USER", "adminE9F5dKe");
-define("DB_PASS", "vsYlrF7DHBF8");
-define("DB_NAME", "LoginDB");
+define("DB_USER", "projectdb");
+define("DB_PASS", "");
+define("DB_LOGIN", "LoginDB");
+define("DB_APPLICATION", "ApplicationDB");
 
 /**
  * Database Table Constants - the name of the tables used in the DB
