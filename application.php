@@ -1,8 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Online Travel Funding</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 <script type="text/javascript" src="js/view.js"></script>
 <script type="text/javascript" src="js/calendar.js"></script>
@@ -12,11 +10,9 @@
 	
 	<img id="top" src="images/top.png" alt="">
 	<div id="form_container">
-	
-		<h1><a>Online Travel Funding Application</a></h1>
 		<form id="form_919735" class="appnitro"  method="post" action="">
 					<div class="form_description">
-			<h2>Online Travel Funding</h2>
+			<h2>Online Travel Funding Application</h2>
 			<p></p>
 		</div>						
 			<ul >
