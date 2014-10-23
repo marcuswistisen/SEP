@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Online Travel Funding Application</title>
+<title>Online Travel Funding</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 <script type="text/javascript" src="js/view.js"></script>
 <script type="text/javascript" src="js/calendar.js"></script>
@@ -13,7 +13,7 @@
 	<img id="top" src="images/top.png" alt="">
 	<div id="form_container">
 	
-		<h1><a>Online Travel Funding</a></h1>
+		<h1><a>Online Travel Funding Application</a></h1>
 		<form id="form_919735" class="appnitro"  method="post" action="">
 					<div class="form_description">
 			<h2>Online Travel Funding</h2>
