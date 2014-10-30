@@ -115,8 +115,10 @@ class Session
       }
    }
 
-    function submitApplication() {
-
+    function submitApplication($applicationArray) {
+        global $database;
+        if($database->submitApplication($applicationArray))
+            return true;
     }
 
    /**

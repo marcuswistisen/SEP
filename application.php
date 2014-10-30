@@ -367,7 +367,7 @@
         /*<![CDATA[*/
         for (i=0; i < fields.length; i++){
             if (fields[i].value == "")
-                msg += fields[i].id + ' is required. \n';
+                msg += fields[i].name + ' is required. \n';
         }
         /*]]>*/
         if(msg) {
