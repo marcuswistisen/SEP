@@ -10,7 +10,7 @@
 	
 	<img id="top" src="images/top.png" alt="">
 	<div id="form_container">
-		<form id="form_919735" class="appnitro"  method="post" action="">
+		<form id="applicationform" class="appnitro"  method="post" action="">
 					<div class="form_description">
 			<h2>Online Travel Funding Application</h2>
 			<p></p>
@@ -18,91 +18,96 @@
 			<ul >
 			
 					<li id="li_1" >
-		<label class="description" for="element_1">First Name </label>
+		<label class="description" for="firstname">First Name </label>
 		<div>
-			<input id="element_1" name="element_1" class="element text medium" type="text" maxlength="255" value=""/> 
+			<input id="firstname" name="element_1" class="element text medium" type="text" maxlength="255" value="<?php echo $session->userinfo['first_name']; ?>"/>
 		</div> 
 		</li>		<li id="li_2" >
-		<label class="description" for="element_2">Preferred First Name  </label>
+		<label class="description" for="preferredfirst">Preferred First Name  </label>
 		<div>
-			<input id="element_2" name="element_2" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>		<li id="li_3" >
-		<label class="description" for="element_3">Email </label>
+			<input id="preferredfirst" name="element_2" class="element text medium" type="text" maxlength="255" value="<?php echo $session->userinfo['prefered_first_name']; ?>"/>
+		</div>
+        <li id="li_22" >
+            <label class="description" for="lastname">Last Name  </label>
+            <div>
+                <input id="lastname" name="element_22" class="element text medium" type="text" maxlength="255" value="<?php echo $session->userinfo['last_name']; ?>"/>
+            </div>
+        </li>		<li id="li_3" >
+		<label class="description" for="email">Email </label>
 		<div>
-			<input id="element_3" name="element_3" class="element text medium" type="text" maxlength="255" value=""/> 
+			<input id="email" name="element_3" class="element text medium" type="text" maxlength="255" value="<?php echo $session->userinfo['email']; ?>"/>
 		</div> 
 		</li>		<li id="li_4" >
-		<label class="description" for="element_4">Phone </label>
+		<label class="description" for="phone">Phone </label>
 		<div>
-			<input id="element_4" name="element_4" class="element text medium" type="text" maxlength="255" value=""/> 
+			<input id="phone" name="element_4" class="element text medium" type="text" maxlength="255" value="<?php echo $session->userinfo['phone_number']; ?>"/>
 		</div> 
 		</li>		<li id="li_5" >
-		<label class="description" for="element_5">School Centre </label>
+		<label class="description" for="schoolcentre">School Centre </label>
 		<div>
-			<input id="element_5" name="element_5" class="element text medium" type="text" maxlength="255" value=""/> 
+			<input id="schoolcentre" name="element_5" class="element text medium" type="text" maxlength="255" value=""/>
 		</div> 
 		</li>		<li id="li_6" >
-		<label class="description" for="element_6">UTS ID </label>
+		<label class="description" for="utsid">UTS ID </label>
 		<div>
-			<input id="element_6" name="element_6" class="element text medium" type="text" maxlength="255" value=""/> 
+			<input id="utsid" name="element_6" class="element text medium" type="text" maxlength="255" value="<?php echo $session->userinfo['uts_id']; ?>"/>
 		</div> 
 		</li>		<li id="li_7" >
-		<label class="description" for="element_7">Supervisor </label>
+		<label class="description" for="supervisor">Supervisor </label>
 		<div>
-			<input id="element_7" name="element_7" class="element text medium" type="text" maxlength="255" value=""/> 
+			<input id="supervisor" name="element_7" class="element text medium" type="text" maxlength="255" value=""/>
 		</div> 
 		</li>		<li id="li_28" >
 		<label class="description" for="element_28"> </label>
 		<span>
-			<input id="element_28_1" name="element_28_1" class="element checkbox" type="checkbox" value="1" />
+			<input id="booresearchstudent" name="element_28_1" class="element checkbox" type="checkbox" value="1" />
 <label class="choice" for="element_28_1">I am a research student</label>
-<input id="element_28_2" name="element_28_2" class="element checkbox" type="checkbox" value="1" />
+<input id="booresearchgrant" name="element_28_2" class="element checkbox" type="checkbox" value="1" />
 <label class="choice" for="element_28_2">I have research grant</label>
-<input id="element_28_3" name="element_28_3" class="element checkbox" type="checkbox" value="1" />
+<input id="booresearchstrength" name="element_28_3" class="element checkbox" type="checkbox" value="1" />
 <label class="choice" for="element_28_3">I have research strength</label>
 
 		</span> 
 		</li>		<li id="li_8" >
 		<label class="description" for="element_8">Paper Title </label>
 		<div>
-			<input id="element_8" name="element_8" class="element text medium" type="text" maxlength="255" value=""/> 
+			<input id="papertitle" name="element_8" class="element text medium" type="text" maxlength="255" value=""/>
 		</div> 
 		</li>		<li id="li_9" >
 		<label class="description" for="element_9">Evidence </label>
 		<div>
-			<textarea id="element_9" name="element_9" class="element textarea medium"></textarea> 
+			<textarea id="evidence" name="element_9" class="element textarea medium"></textarea>
 		</div> 
 		</li>		<li id="li_29" >
 		<label class="description" for="element_29"> </label>
 		<span>
-			<input id="element_29_1" name="element_29_1" class="element checkbox" type="checkbox" value="1" />
+			<input id="boojournalaccepted" name="element_29_1" class="element checkbox" type="checkbox" value="1" />
 <label class="choice" for="element_29_1">Journal Accepted</label>
-<input id="element_29_2" name="element_29_2" class="element checkbox" type="checkbox" value="1" />
+<input id="boopeerreviewhappend" name="element_29_2" class="element checkbox" type="checkbox" value="1" />
 <label class="choice" for="element_29_2">Peer Review Happend</label>
-<input id="element_29_3" name="element_29_3" class="element checkbox" type="checkbox" value="1" />
+<input id="boojournaldeclared" name="element_29_3" class="element checkbox" type="checkbox" value="1" />
 <label class="choice" for="element_29_3">Journal Declared</label>
 
 		</span> 
 		</li>		<li id="li_10" >
 		<label class="description" for="element_10">Peer Review URL </label>
 		<div>
-			<input id="element_10" name="element_10" class="element text medium" type="text" maxlength="255" value=""/> 
+			<input id="peerreviewurl" name="element_10" class="element text medium" type="text" maxlength="255" value=""/>
 		</div> 
 		</li>		<li id="li_11" >
 		<label class="description" for="element_11">Copy Paper URL </label>
 		<div>
-			<input id="element_11" name="element_11" class="element text medium" type="text" maxlength="255" value=""/> 
+			<input id="copypaperurl" name="element_11" class="element text medium" type="text" maxlength="255" value=""/>
 		</div> 
 		</li>		<li id="li_12" >
 		<label class="description" for="element_12">Conference URL </label>
 		<div>
-			<input id="element_12" name="element_12" class="element text medium" type="text" maxlength="255" value=""/> 
+			<input id="conferanceurl" name="element_12" class="element text medium" type="text" maxlength="255" value=""/>
 		</div> 
 		</li>		<li id="li_13" >
 		<label class="description" for="element_13">Conference Name </label>
 		<div>
-			<input id="element_13" name="element_13" class="element text medium" type="text" maxlength="255" value=""/> 
+			<input id="conferancename" name="element_13" class="element text medium" type="text" maxlength="255" value=""/>
 		</div> 
 		</li>		<li id="li_14" >
 		<label class="description" for="element_14">Conferance Start </label>
@@ -165,19 +170,19 @@
 		</li>		<li id="li_16" >
 		<label class="description" for="element_16">Conference Country </label>
 		<div>
-			<input id="element_16" name="element_16" class="element text medium" type="text" maxlength="255" value=""/> 
+			<input id="conferancecountry" name="element_16" class="element text medium" type="text" maxlength="255" value=""/>
 		</div> 
 		</li>		<li id="li_17" >
 		<label class="description" for="element_17">Conference Quality </label>
 		<div>
-			<input id="element_17" name="element_17" class="element text medium" type="text" maxlength="255" value=""/> 
+			<input id="conferancequality" name="element_17" class="element text medium" type="text" maxlength="255" value=""/>
 		</div> 
 		</li>		<li id="li_30" >
 		<label class="description" for="element_30"> </label>
 		<span>
-			<input id="element_30_1" name="element_30_1" class="element checkbox" type="checkbox" value="1" />
+			<input id="specialinvite" name="element_30_1" class="element checkbox" type="checkbox" value="1" />
 <label class="choice" for="element_30_1">Special Invitation</label>
-<input id="element_30_2" name="element_30_2" class="element checkbox" type="checkbox" value="1" />
+<input id="peparrangement" name="element_30_2" class="element checkbox" type="checkbox" value="1" />
 <label class="choice" for="element_30_2">PEP Arrangement</label>
 
 		</span> 
@@ -242,7 +247,7 @@
 		</li>		<li id="li_31" >
 		<label class="description" for="element_31">Travel Location </label>
 		<div>
-		<select class="element select medium" id="element_31" name="element_31"> 
+		<select class="element select medium" id="travellocation" name="element_31">
 			<option value="" selected="selected"></option>
 <option value="1" >Domestic</option>
 <option value="2" >International</option>
@@ -252,17 +257,17 @@
 		</li>		<li id="li_20" >
 		<label class="description" for="element_20">Travel Justification </label>
 		<div>
-			<textarea id="element_20" name="element_20" class="element textarea medium"></textarea> 
+			<textarea id="traveljustification" name="element_20" class="element textarea medium"></textarea>
 		</div> 
 		</li>		<li id="li_21" >
 		<label class="description" for="element_21">Air Fares Cost </label>
 		<span class="symbol">$</span>
 		<span>
-			<input id="element_21_1" name="element_21_1" class="element text currency" size="10" value="" type="text" /> .		
+			<input id="aircost" name="element_21_1" class="element text currency" size="10" value="" type="text" /> .
 			<label for="element_21_1">Dollars</label>
 		</span>
 		<span>
-			<input id="element_21_2" name="element_21_2" class="element text" size="2" maxlength="2" value="" type="text" />
+			<input id="aircostc" name="element_21_2" class="element text" size="2" maxlength="2" value="" type="text" />
 			<label for="element_21_2">Cents</label>
 		</span>
 		 
@@ -270,23 +275,23 @@
 		<label class="description" for="element_22">Meals Cost </label>
 		<span class="symbol">$</span>
 		<span>
-			<input id="element_22_1" name="element_22_1" class="element text currency" size="10" value="" type="text" /> .		
+			<input id="meald" name="element_22_1" class="element text currency" size="10" value="" type="text" /> .
 			<label for="element_22_1">Dollars</label>
 		</span>
 		<span>
 			<input id="element_22_2" name="element_22_2" class="element text" size="2" maxlength="2" value="" type="text" />
-			<label for="element_22_2">Cents</label>
+			<label for="mealc">Cents</label>
 		</span>
 		 
 		</li>		<li id="li_23" >
 		<label class="description" for="element_23">Accomondation Cost </label>
 		<span class="symbol">$</span>
 		<span>
-			<input id="element_23_1" name="element_23_1" class="element text currency" size="10" value="" type="text" /> .		
+			<input id="accomondationd" name="element_23_1" class="element text currency" size="10" value="" type="text" /> .
 			<label for="element_23_1">Dollars</label>
 		</span>
 		<span>
-			<input id="element_23_2" name="element_23_2" class="element text" size="2" maxlength="2" value="" type="text" />
+			<input id="accomondationc" name="element_23_2" class="element text" size="2" maxlength="2" value="" type="text" />
 			<label for="element_23_2">Cents</label>
 		</span>
 		 
@@ -294,11 +299,11 @@
 		<label class="description" for="element_24">Conferance Cost </label>
 		<span class="symbol">$</span>
 		<span>
-			<input id="element_24_1" name="element_24_1" class="element text currency" size="10" value="" type="text" /> .		
+			<input id="conferancecd" name="element_24_1" class="element text currency" size="10" value="" type="text" /> .
 			<label for="element_24_1">Dollars</label>
 		</span>
 		<span>
-			<input id="element_24_2" name="element_24_2" class="element text" size="2" maxlength="2" value="" type="text" />
+			<input id="conferancecc" name="element_24_2" class="element text" size="2" maxlength="2" value="" type="text" />
 			<label for="element_24_2">Cents</label>
 		</span>
 		 
@@ -306,11 +311,11 @@
 		<label class="description" for="element_25">Local Fares Cost </label>
 		<span class="symbol">$</span>
 		<span>
-			<input id="element_25_1" name="element_25_1" class="element text currency" size="10" value="" type="text" /> .		
+			<input id="localfaresd" name="element_25_1" class="element text currency" size="10" value="" type="text" /> .
 			<label for="element_25_1">Dollars</label>
 		</span>
 		<span>
-			<input id="element_25_2" name="element_25_2" class="element text" size="2" maxlength="2" value="" type="text" />
+			<input id="localfaresc" name="element_25_2" class="element text" size="2" maxlength="2" value="" type="text" />
 			<label for="element_25_2">Cents</label>
 		</span>
 		 
@@ -318,11 +323,11 @@
 		<label class="description" for="element_26">Car Mileage Cost </label>
 		<span class="symbol">$</span>
 		<span>
-			<input id="element_26_1" name="element_26_1" class="element text currency" size="10" value="" type="text" /> .		
+			<input id="carmileaged" name="element_26_1" class="element text currency" size="10" value="" type="text" /> .
 			<label for="element_26_1">Dollars</label>
 		</span>
 		<span>
-			<input id="element_26_2" name="element_26_2" class="element text" size="2" maxlength="2" value="" type="text" />
+			<input id="carmileagec" name="element_26_2" class="element text" size="2" maxlength="2" value="" type="text" />
 			<label for="element_26_2">Cents</label>
 		</span>
 		 
@@ -330,11 +335,11 @@
 		<label class="description" for="element_27">Other Cost </label>
 		<span class="symbol">$</span>
 		<span>
-			<input id="element_27_1" name="element_27_1" class="element text currency" size="10" value="" type="text" /> .		
+			<input id="otherd" name="element_27_1" class="element text currency" size="10" value="" type="text" /> .
 			<label for="element_27_1">Dollars</label>
 		</span>
 		<span>
-			<input id="element_27_2" name="element_27_2" class="element text" size="2" maxlength="2" value="" type="text" />
+			<input id="otherc" name="element_27_2" class="element text" size="2" maxlength="2" value="" type="text" />
 			<label for="element_27_2">Cents</label>
 		</span>
 		 
@@ -343,11 +348,10 @@
 					<li class="buttons">
 			    <input type="hidden" name="form_id" value="919735" />
 			    
-				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+				<input id="saveForm" class="button_text" type="button" name="submit" onclick="Validate()" value="Submit" />
                         <input id="Cancel" class="button_text" type="button" onclick="ShowApplication()" name="cancel" value="Cancel" />
 		</li>
 			</ul>
-		</form>	
 		<div id="footer">
 		</div>
 	</div>
@@ -355,3 +359,22 @@
 	</body>
 </div>
 </html>
+
+<script>
+    function Validate()
+    {
+        var msg= "", fields = document.getElementById("applicationform").getElementsByTagName("input");
+        /*<![CDATA[*/
+        for (i=0; i < fields.length; i++){
+            if (fields[i].value == "")
+                msg += fields[i].id + ' is required. \n';
+        }
+        /*]]>*/
+        if(msg) {
+            alert(msg);
+            return false;
+        }
+        else
+            return SubmitApplication();
+    }
+</script>

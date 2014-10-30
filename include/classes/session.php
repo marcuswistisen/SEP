@@ -115,6 +115,10 @@ class Session
       }
    }
 
+    function submitApplication() {
+
+    }
+
    /**
     * generateRandStrCookie - Generates a string made up of randomized
     * letters (lower and upper case) and digits of 16 characters length

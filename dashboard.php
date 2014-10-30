@@ -25,4 +25,26 @@
             $('#button-blue').hide();
         });
     }
+
+    function SubmitApplication(){
+        var x = document.getElementById("applicationform");
+        var application = [];
+        for (var i = 0; i < x.length; i++) {
+            application[i] = x.elements[i].value;
+        }
+        var value = "1"
+        var r=confirm("Are you sure you want to submit this application?");
+        if (r==true)
+        {
+            $.ajax({
+                type: "POST",
+                url: "process.php",
+                data: {subapplication : value, application:application},
+                success: function(){
+
+                }
+            });
+
+        }
+    }
 </script>

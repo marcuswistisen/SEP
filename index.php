@@ -12,6 +12,6 @@
 		<!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
     </head>
     <body>
-		<?php global $session; if ($session->logged_in) require("dashboard.php"); else require("login.php");?>
+		<?php global $session, $form; if ($session->logged_in) require("dashboard.php"); else require("login.php");?>
     </body>
 </html>
