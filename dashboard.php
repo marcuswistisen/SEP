@@ -41,7 +41,7 @@
                 url: "process.php",
                 data: {subapplication : value, application:application},
                 success: function(){
-
+                    alert("Your application have been submitted");
                 }
             });
 

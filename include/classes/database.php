@@ -73,7 +73,9 @@ class MySQLDB
      	else
    	    	return false;
    }
-    function submitApplication($applicationArray){
+    function submitApplication($applicationArray)
+    {
+        // Get All variables
         $firstname = $applicationArray[0];
         $preferredfirst = $applicationArray[1];
         $lastname = $applicationArray[2];
@@ -94,27 +96,63 @@ class MySQLDB
         $copypaperurl = $applicationArray[17];
         $conferanceurl = $applicationArray[18];
         $conferancename = $applicationArray[19];
-        $cstart = $applicationArray[22].'-'.$applicationArray[20].'-'.$applicationArray[21];
-        $cend =  $applicationArray[25].'-'.$applicationArray[23].'-'.$applicationArray[24];
+        $cstart = $applicationArray[22] . '-' . $applicationArray[20] . '-' . $applicationArray[21];
+        $cend = $applicationArray[25] . '-' . $applicationArray[23] . '-' . $applicationArray[24];
         $conferancecountry = $applicationArray[26];
         $conferancequality = $applicationArray[27];
         $specialinvite = $applicationArray[28];
         $peparrangement = $applicationArray[29];
-        $travelstart = $applicationArray[32].'-'.$applicationArray[30].'-'.$applicationArray[31];
-        $travelend  = $applicationArray[35].'-'.$applicationArray[33].'-'.$applicationArray[34];
+        $travelstart = $applicationArray[32] . '-' . $applicationArray[30] . '-' . $applicationArray[31];
+        $travelend = $applicationArray[35] . '-' . $applicationArray[33] . '-' . $applicationArray[34];
         $travellocation = $applicationArray[36];
         $traveljustification = $applicationArray[37];
-        $aircostd = $applicationArray[38];
-        $aircostc = $applicationArray[39];
-        $meald = $applicationArray[40];
-        $mealc = $applicationArray[41];
-        $accomondationd = $applicationArray[42];
-        $accomondationc = $applicationArray[43];
-        $conferancecd  = $applicationArray[44] + ($applicationArray[45]/100);
-        $localfaresd = $applicationArray[46] + ($applicationArray[47]/100);
-        $carmileaged = $applicationArray[48] + ($applicationArray[49]/100);
-        $otherd = $applicationArray[50] + ($applicationArray[51]/100);
+        $aircostd = $applicationArray[38] + ($applicationArray[39] / 100);
+        $meald = $applicationArray[40] + ($applicationArray[41] / 100);
+        $accomondationd = $applicationArray[42] + ($applicationArray[43] / 100);
+        $conferancecd = $applicationArray[44] + ($applicationArray[45] / 100);
+        $localfaresd = $applicationArray[46] + ($applicationArray[47] / 100);
+        $carmileaged = $applicationArray[48] + ($applicationArray[49] / 100);
+        $otherd = $applicationArray[50] + ($applicationArray[51] / 100);
 
+        $conferenceid = '';
+        $costid = '';
+        $justificationid = '';
+        $travelid = '';
+        $universityid = '';
+
+        $q = "INSERT INTO " . TBL_CONFERANCE . " ( `conference_url`, `conference_name`, `conference_start`, `conference_end`, `conference_country`, `conferance_quality`, `special_invitation`, `pep_arrangement`)
+            VALUES ('$conferanceurl','$conferancename','$cstart','$cend','$conferancecountry','$conferancequality','$specialinvite','$peparrangement')";
+        mysql_select_db(DB_APPLICATION, $this->connection) or die(mysql_error());
+        if (mysql_query($q, $this->connection)) { // if inserted into Conference insert into Cost
+            $conferenceid = mysql_insert_id();
+            $q = "INSERT INTO " . TBL_COST . " (`air_fares`, `meal_cost`, `accomondation_cost`, `conferance_cost`, `local_fares_cost`, `car_milage_cost`, `other_cost`)
+                VALUES ('$aircostd','$meald','$accomondationd','$conferancecd','$localfaresd','$carmileaged','$otherd')";
+            if (mysql_query($q, $this->connection)) { // if inserted into Cost insert into Justification
+                $costid = mysql_insert_id();
+                $q = "INSERT INTO " . TBL_JUSTIFICATION . "( `paper_title`, `evidence`, `journal_accepted`, `peer_review_happend`, `journal_declared`, `peer_review_url`, `copy_paper_url`)
+                  VALUES ('$papertitle', '$evidence','$boojournalaccepted','$boopeerreviewhappend','$boojournaldeclared','$peerreviewurl','$copypaperurl')";
+                if (mysql_query($q, $this->connection)) { // if inserted into Justification insert into Travel
+                    $justificationid = mysql_insert_id();
+                    $q = "INSERT INTO ".TBL_TRAVEL." (`travel_start`, `travel_end`, `travel_loc`, `travel_justification`)
+                      VALUES ('$travelstart','$travelend','$travellocation','$traveljustification')";
+                    if (mysql_query($q, $this->connection)) { // if inserted into Travel insert into University
+                        $travelid = mysql_insert_id();
+                        $q = "INSERT INTO ".TBL_UNIVERSITY." (`supervisor`, `research_student`, `research_grant`, `research_stregth`)
+                          VALUES ('$supervisor','$booresearchstudent','$booresearchgrant','$booresearchstrength')";
+                        if (mysql_query($q, $this->connection)) { // if inserted into University insert into Application
+                            $universityid = mysql_insert_id();
+                            $q = "INSERT INTO ".TBL_APPLICATION." (`uts_id`, `university_id`, `justification_id`, `cost_id`, `conferance_id`, `travel_id`)
+                              VALUES ('$utsid','$universityid','$justificationid','$costid','$conferenceid','$travelid')";
+                            if (mysql_query($q, $this->connection)) { // if Application into University we are done so return true :)
+                                return true;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+        }
     }
 };
 

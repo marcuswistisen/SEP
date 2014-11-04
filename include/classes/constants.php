@@ -6,8 +6,8 @@
  * correct if you going to try it out!
  */
 define("DB_SERVER", "localhost");
-define("DB_USER", "projectdb");
-define("DB_PASS", "");
+define("DB_USER", "adminE9F5dKe");
+define("DB_PASS", "vsYlrF7DHBF8");
 define("DB_LOGIN", "LoginDB");
 define("DB_APPLICATION", "ApplicationDB");
 
@@ -15,6 +15,12 @@ define("DB_APPLICATION", "ApplicationDB");
  * Database Table Constants - the name of the tables used in the DB
  */
 define("TBL_USER", "User");
+define("TBL_APPLICATION", "Application");
+define("TBL_CONFERANCE", "Conferance");
+define("TBL_COST", "Cost");
+define("TBL_JUSTIFICATION", "Justification");
+define("TBL_TRAVEL", "Travel");
+define("TBL_UNIVERSITY", "University");
 
 /**
  * Not logged in costant -  just for validating if a user is logged in or not.
