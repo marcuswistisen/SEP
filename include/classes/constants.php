@@ -30,6 +30,6 @@ define("NOT_LOGGED_IN", "NULL");
 /**
  * Cookie constants - Expire and Path
  */
-define("COOKIE_EXPIRE", 60*60*24*100);  //100 days by default
+define("COOKIE_EXPIRE", 15);  //15min by default
 define("COOKIE_PATH", "/");  //Avaible in whole domain
 ?>
